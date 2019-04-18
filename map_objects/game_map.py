@@ -23,7 +23,7 @@ class GameMap:
   def create_v_tunnel(self, y1, y2, x):
     for y in range(min(y1,y2), max(y1, y2) + 1):
       self.tiles[x][y].blocked = False
-      self.tiles[x][y].blocked_Sight = False
+      self.tiles[x][y].block_sight = False
 
   def initialize_tiles(self):
     tiles = [[Tile(True) for y in range(self.height)] for x in range(self.width)]
